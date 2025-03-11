@@ -1,0 +1,28 @@
+.popup {
+  visibility: hidden;
+  font-family: serif;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(220, 70, 200, 0.9);
+  position: absolute;
+  display: flex;
+  width: 50%;
+  height: 50%;
+  justify-content: center;
+}
+
+.popup__visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+body {
+  background-color: bisque;
+}
+
+button {
+  font-family:'Courier New', Courier, monospace;
+  font-size: large;
+  font-weight: bold;
+
+}
