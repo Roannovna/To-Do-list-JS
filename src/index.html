@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>ToDo list</title>
 </head>
 <body>
   <main class="ToDo-list">
@@ -12,8 +12,9 @@
       <div class="ToDo-list__header_ornament"></div>
     </div>
     <div class="ToDo-list__content">
-      <ul class="ToDo-list__content_ul">
-        <li></li>
+      <ul class="ToDo__ul">
+        <li class="ToDo">
+        </li>
       </ul>
     </div>
     <button class="ToDo-list__button">Добавить</button>
@@ -21,6 +22,16 @@
   <div class="static_side">
     <img src="./images/khokhloma.svg" alt="Хохлома" class="static_side__image">
   </div>
+  <template class="popup">
+    <form>
+      <input 
+        id="popup__input"
+        type="text" 
+        placeholder="Дай новый наказ" 
+        autocomplete="off">
+      <button class="popup__button">Добавить</button>
+    </form>
+  </template>
   <script src="index.js"></script>
 </body>
 </html>
