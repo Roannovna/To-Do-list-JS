@@ -6,31 +6,45 @@
   <title>ToDo list</title>
 </head>
 <body>
-  <main class="ToDo-list">
-    <div class="ToDo-list__header">
-      <h1 class="ToDo-list__header_title">Список наказов</h1>
-      <div class="ToDo-list__header_ornament"></div>
+  <main>
+    <div class="header">
+      <h1 class="header_title">Список наказов</h1>
+      <div class="header_ornament"></div>
     </div>
-    <div class="ToDo-list__content">
-      <ul class="ToDo__ul">
-        <li class="ToDo">
-        </li>
-      </ul>
-    </div>
-    <button class="ToDo-list__button">Добавить</button>
+    <section class="ToDo-list__content">
+      <ul class="ToDo-list"></ul>
+    </section>
+    <button
+      popovertarget="ToDo-list__popover"
+      popovertargetaction="show"
+      class="popover__open-btn"
+    >
+      Добавить
+    </button>
   </main>
-  <div class="static_side">
-    <img src="./images/khokhloma.svg" alt="Хохлома" class="static_side__image">
+  <div class="decor">
+    <img src="./images/khokhloma.svg" alt="Хохлома" class="decor__image">
   </div>
-  <template class="popup">
-    <form>
-      <input 
-        id="popup__input"
-        type="text" 
-        placeholder="Дай новый наказ" 
-        autocomplete="off">
-      <button class="popup__button">Добавить</button>
-    </form>
+  <form id="ToDo-list__popover" popover>
+    <input 
+      id="popover__input" 
+      type="text" 
+      placeholder="Новый наказ"
+      autocomplete="off"
+    >
+    <button
+      popovertargetaction="hide" 
+      class="popover__close-btn"
+    >
+      Добавить
+    </button>
+  </form>
+  <template>
+    <li class="ToDo__line">
+      <button class="ToDo__status-btn"></button>
+      <div class="ToDo__task"></div>
+      <button class="ToDo__delete-btn"></button>
+    </li>
   </template>
   <script src="index.js"></script>
 </body>
