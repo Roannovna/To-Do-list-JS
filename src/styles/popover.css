@@ -3,4 +3,9 @@
   gap: 35px;
   justify-self: center;
   align-self: center;
+  max-width: 50vw;
+}
+
+#popover__close-btn {
+  background-image: ;
 }

@@ -2,12 +2,13 @@
   --background-color: #EEE6DD;
   --accent-color: #773737;
   --main-color: #241D1D;
+  --light-color: #9B8888;
   --accent-font-size: 60px;
   --main-font-size: 35px;
   --accent-font-weight: 300;
   --main-font-weight: 200;
   --font-family: "Monomakh", serif;
-  --title-text: var(--accent-font-weight) var(--accent-font-size) var(--font-family) var(--accent-color);
-  --main-text: var(--main-font-weight) var(--main-font-size) var(--font-family) var(--main-color);
-  --btn-text: var(--accent-font-weight) var(--accent-font-size) var(--font-family) var(--accent-color);
+  --title-text: var(--accent-font-weight) var(--accent-font-size) var(--font-family);
+  --main-text: var(--main-font-weight) var(--main-font-size) var(--font-family);
+  --btn-text: var(--accent-font-weight) var(--accent-font-size) var(--font-family);
 }

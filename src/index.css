@@ -6,7 +6,7 @@
 
 body {
   background-color: #EEE6DD;
-  font-family: "Monomakh", sans-serif;
+  font-family: var(--font-family);
   padding: 50px;
   display: grid;
   grid-auto-rows: min-content;
