@@ -18,8 +18,7 @@
       popovertarget="ToDo-list__popover"
       popovertargetaction="show"
       id="popover__open-btn"
-      class="add-btn"
-    >
+      class="add-btn">
       Добавить
     </button>
   </main>
@@ -28,7 +27,13 @@
   </div>
   <form id="ToDo-list__popover" popover>
     <div class="popover__content">
-      <input id="popover__input" type="text" placeholder="Новый наказ" autocomplete="off">
+      <textarea
+        id="popover__input"
+        name="new-task"
+        cols="25"
+        rows="3"
+        placeholder="Новый наказ"
+        autocomplete="off"></textarea>
       <button popovertargetaction="hide" id="popover__close-btn">
       </button>
       <button id="ToDo__add-btn" class="add-btn">Издать</button>
