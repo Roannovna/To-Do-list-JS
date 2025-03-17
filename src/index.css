@@ -1,11 +1,12 @@
 @import url(./styles/global.css);
 @import url(./styles/variables.css);
 @import url(./fonts/fonts.css);
+@import url(./styles/button.css);
 @import url(./styles/todo-list.css);
 @import url(./styles/popover.css);
 
 body {
-  background-color: #EEE6DD;
+  background-color: var(--background-color);
   font-family: var(--font-family);
   padding: 50px;
   display: grid;
@@ -25,4 +26,3 @@ body {
   height: 80vmin;
   display: block;
 }
-

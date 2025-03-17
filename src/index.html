@@ -17,7 +17,8 @@
     <button
       popovertarget="ToDo-list__popover"
       popovertargetaction="show"
-      class="popover__open-btn"
+      id="popover__open-btn"
+      class="add-btn"
     >
       Добавить
     </button>
@@ -26,18 +27,12 @@
     <img src="./images/khokhloma.svg" alt="Хохлома" class="decor__image">
   </div>
   <form id="ToDo-list__popover" popover>
-    <input 
-      id="popover__input" 
-      type="text" 
-      placeholder="Новый наказ"
-      autocomplete="off"
-    >
-    <button
-      popovertargetaction="hide" 
-      id="popover__close-btn"
-    >
-    </button>
-    <button id="ToDo__add-btn">Издать</button>
+    <div class="popover__content">
+      <input id="popover__input" type="text" placeholder="Новый наказ" autocomplete="off">
+      <button popovertargetaction="hide" id="popover__close-btn">
+      </button>
+      <button id="ToDo__add-btn" class="add-btn">Издать</button>
+    </div>
   </form>
   <template>
     <li class="ToDo__line">

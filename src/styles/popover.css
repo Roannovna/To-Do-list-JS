@@ -1,11 +1,41 @@
-[popover] {
+#ToDo-list__popover::backdrop {
+  background-color: var(--accent-color);
+  opacity: 0.4;
+}
+
+.popover__content {
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr;
   padding: 20px;
-  gap: 35px;
   justify-self: center;
   align-self: center;
   max-width: 50vw;
+  background-color: var(--background-color);
 }
 
 #popover__close-btn {
-  background-image: ;
+  justify-self: end;
+  background-image: url(../images/cancel.svg);
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 26px;
+  height: 26px;
+  border: none;
+}
+
+#popover__input {
+  grid-row-start: 2;
+  padding: 5px;
+  font: var(--main-text);
+}
+
+#popover__input::placeholder {
+  font: var(--main-text);
+}
+
+#ToDo__add-btn {
+  grid-row-start: 3;
+  margin-top: 35px;
 }
