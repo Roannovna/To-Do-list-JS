@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>ToDo list</title>
 </head>
 <body>
-  <h1>Hello</h1>
+  <main>
+    <div class="header">
+      <h1 class="header_title">Список наказов</h1>
+      <div class="header_ornament"></div>
+    </div>
+    <section class="ToDo-list__content">
+      <ul class="ToDo-list"></ul>
+    </section>
+    <button
+      popovertarget="ToDo-list__popover"
+      popovertargetaction="show"
+      id="popover__open-btn"
+      class="add-btn">
+      Добавить
+    </button>
+  </main>
+  <div class="decor">
+    <img src="./images/khokhloma.svg" alt="Хохлома" class="decor__image">
+  </div>
+  <form id="ToDo-list__popover" popover>
+    <div class="popover__content">
+      <textarea
+        id="popover__input"
+        name="new-task"
+        cols="25"
+        rows="3"
+        placeholder="Новый наказ"
+        autocomplete="off"></textarea>
+      <button popovertargetaction="hide" id="popover__close-btn">
+      </button>
+      <button id="ToDo__add-btn" class="add-btn">Издать</button>
+    </div>
+  </form>
+  <template>
+    <li class="ToDo__line">
+      <button class="ToDo__status-btn"></button>
+      <div class="ToDo__task"></div>
+      <button class="ToDo__delete-btn"></button>
+    </li>
+  </template>
+  <script src="index.js"></script>
 </body>
 </html>

@@ -1,0 +1,58 @@
+[popover] {
+  padding: none;
+  border-color: var(--main-color);
+  border-width: 3px;
+  border-radius: 15px;
+  border-style: outset;
+  background-color: var(--background-color);
+  min-width: 200px;
+  width: 50vw;
+}
+
+#ToDo-list__popover::backdrop {
+  background-color: #211412;
+  opacity: 0.5;
+}
+
+.popover__content {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
+  padding: 20px;
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+  background-color: var(--background-color);
+}
+
+#popover__close-btn {
+  justify-self: end;
+  background-image: url(../images/cancel.svg);
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 26px;
+  height: 26px;
+  border: none;
+}
+
+#popover__input {
+  grid-row-start: 2;
+  padding: 10px;
+  font: var(--main-text);
+  border-radius: 10px;
+  border-color: var(--main-color);
+  min-width: 180px;
+  width: 100%;
+  resize: none;
+  background-color: #77373710;
+}
+
+#popover__input::placeholder {
+  font: var(--main-text);
+}
+
+#ToDo__add-btn {
+  grid-row-start: 3;
+}

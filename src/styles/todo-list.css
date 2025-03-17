@@ -1,0 +1,27 @@
+.main {
+  grid-column-start: 1;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 35px;
+}
+
+.header_title {
+  font: var(--title-text);
+  color: var(--accent-color);
+}
+
+.header_ornament {
+  background-image: url("../images/ornament.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 20px;
+}

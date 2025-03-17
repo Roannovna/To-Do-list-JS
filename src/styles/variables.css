@@ -1,0 +1,15 @@
+:root {
+  --background-color: #faebd7;
+  --accent-color: #773737;
+  --main-color: #241D1D;
+  --light-color: #9B8888;
+  --accent-font-size: 60px;
+  --main-font-size: 25px;
+  --btn-font-size: 35px;
+  --accent-font-weight: 300;
+  --main-font-weight: 200;
+  --font-family: "Monomakh", "SancreekRegular", serif;
+  --title-text: var(--accent-font-weight) var(--accent-font-size) var(--font-family);
+  --main-text: var(--main-font-weight) var(--main-font-size) var(--font-family);
+  --btn-text: var(--main-font-weight) var(--btn-font-size) var(--font-family);
+}

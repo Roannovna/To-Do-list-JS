@@ -1,0 +1,14 @@
+.add-btn {
+  display: flex;
+  width: 200px;
+  border-color: var(--main-color);
+  border-width: 3px;
+  border-radius: 35px;
+  border-style: outset;
+  font: var(--btn-text);
+  color: #773737;
+  background-color: var(--background-color);
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
