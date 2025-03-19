@@ -8,6 +8,14 @@ const taskInput = document.querySelector("#popover__input");
 const todoList = document.querySelector(".todo-list");
 const taskTemplate = document.querySelector("template");
 
+function handleDeleteTodoLine(evt) {
+  evt.currentTarget.closest(".todo__line").remove();
+}
+
+function handleChangeStatusBtn(evt) {
+  evt.currentTarget.closest(".todo__line").classList.toggle("done");
+}
+
 function onAddTask(evt) {
   evt.preventDefault();
   if (taskInput.value.trim() === "") return;
@@ -19,11 +27,12 @@ function onAddTask(evt) {
 
   taskText.textContent = taskInput.value;
 
-  deleteBtn.addEventListener("click", () => taskItem.remove());
+  deleteBtn.addEventListener("click", handleDeleteTodoLine);
 
-  statusBtn.addEventListener("click", () => {
-    statusBtn.classList.toggle(".done");
-  });
+  statusBtn.addEventListener("click", handleChangeStatusBtn);
+  // statusBtn.addEventListener("click", () => {
+  //   statusBtn.classList.toggle(".done");
+  // });
 
   todoList.append(taskItem);
 
