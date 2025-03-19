@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ToDo list</title>
+  <title>todo list</title>
 </head>
 <body>
   <main>
@@ -11,11 +11,13 @@
       <h1 class="header_title">Список наказов</h1>
       <div class="header_ornament"></div>
     </div>
-    <section class="ToDo-list__content">
-      <ul class="ToDo-list"></ul>
+    <section class="todo-list__content">
+      <ul class="todo-list">
+        <li></li>
+      </ul>
     </section>
     <button
-      popovertarget="ToDo-list__popover"
+      popovertarget="todo-list__popover"
       popovertargetaction="show"
       id="popover__open-btn"
       class="add-btn">
@@ -25,7 +27,7 @@
   <div class="decor">
     <img src="./images/khokhloma.svg" alt="Хохлома" class="decor__image">
   </div>
-  <form id="ToDo-list__popover" popover>
+  <form id="todo-list__popover" popover>
     <div class="popover__content">
       <textarea
         id="popover__input"
@@ -36,14 +38,14 @@
         autocomplete="off"></textarea>
       <button popovertargetaction="hide" id="popover__close-btn">
       </button>
-      <button id="ToDo__add-btn" class="add-btn">Издать</button>
+      <button id="todo__add-btn" class="add-btn">Издать</button>
     </div>
   </form>
   <template>
-    <li class="ToDo__line">
-      <button class="ToDo__status-btn"></button>
-      <div class="ToDo__task"></div>
-      <button class="ToDo__delete-btn"></button>
+    <li class="todo__line">
+      <button class="todo__status-btn"></button>
+      <div class="todo__task"></div>
+      <button class="todo__delete-btn"></button>
     </li>
   </template>
   <script src="index.js"></script>

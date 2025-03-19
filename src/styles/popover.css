@@ -9,7 +9,7 @@
   width: 50vw;
 }
 
-#ToDo-list__popover::backdrop {
+#todo-list__popover::backdrop {
   background-color: #211412;
   opacity: 0.5;
 }
@@ -53,6 +53,6 @@
   font: var(--main-text);
 }
 
-#ToDo__add-btn {
+#todo__add-btn {
   grid-row-start: 3;
 }
