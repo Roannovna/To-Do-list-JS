@@ -39,4 +39,11 @@ function handleClosePopover(evt) {
 }
 
 closePopoverBtn.addEventListener("click", handleClosePopover);
+
 addBtn.addEventListener("click", onAddTask);
+
+taskInput.addEventListener("keydown", (evt) => {
+  if (evt.code === "Enter") {
+    onAddTask(evt);
+  }
+});
