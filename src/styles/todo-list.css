@@ -53,6 +53,7 @@
   grid-template-columns: 30px auto 30px;
   gap: 15px;
   align-items: center;
+  width: 100%;
 }
 
 .todo__status-btn {
@@ -68,6 +69,9 @@
 .todo__task {
   font: var(--main-text);
   color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  flex-flow: column;
 }
 
 .todo__delete-btn {
