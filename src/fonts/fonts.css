@@ -1,11 +1,16 @@
 @font-face {
-  font-family: "SancreekRegular";
-  src: url(./Sancreek-Regular.ttf);
+  font-family: "Monomakh";
+  src: url(./Monomakh-Regular.ttf);
+  unicode-range: U+0400-04FF;
+}
+
+@font-face {
+  font-family: "MedievalSharp-Regular";
+  src: url(./MedievalSharp-Regular.ttf);
   unicode-range: U+0000-00FF;
 }
 
 @font-face {
-  font-family: "Monomakh";
-  src: url(./Monomakh-Regular.ttf);
-  unicode-range: U+0400-04FF;
+  font-family: "RuslanDisplay-Regular";
+  src: url(./RuslanDisplay-Regular.ttf);
 }

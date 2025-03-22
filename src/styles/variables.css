@@ -8,7 +8,7 @@
   --btn-font-size: 35px;
   --accent-font-weight: 300;
   --main-font-weight: 200;
-  --font-family: "Monomakh", "SancreekRegular", serif;
+  --font-family: "Monomakh", "MedievalSharp-Regular", "RuslanDisplay-Regular", serif;
   --title-text: var(--accent-font-weight) var(--accent-font-size) var(--font-family);
   --main-text: var(--main-font-weight) var(--main-font-size) var(--font-family);
   --btn-text: var(--main-font-weight) var(--btn-font-size) var(--font-family);

@@ -7,12 +7,13 @@ const addBtn = document.querySelector("#todo__add-btn");
 const taskInput = document.querySelector("#popover__input");
 const todoList = document.querySelector(".todo-list");
 const taskTemplate = document.querySelector("template");
+const closePopoverBtn = document.querySelector("#popover__close-btn");
 
 function handleDeleteTodoLine(evt) {
   evt.currentTarget.closest(".todo__line").remove();
 }
 
-function handleChangeStatusBtn(evt) {
+function handleChangeStatus(evt) {
   evt.currentTarget.closest(".todo__line").classList.toggle("done");
 }
 
@@ -26,23 +27,23 @@ function onAddTask(evt) {
   const statusBtn = taskItem.querySelector(".todo__status-btn");
 
   taskText.textContent = taskInput.value;
-
   deleteBtn.addEventListener("click", handleDeleteTodoLine);
-
-  statusBtn.addEventListener("click", handleChangeStatusBtn);
-  // statusBtn.addEventListener("click", () => {
-  //   statusBtn.classList.toggle(".done");
-  // });
-
+  statusBtn.addEventListener("click", handleChangeStatus);
   todoList.append(taskItem);
-
   taskInput.value = "";
 }
 
+function handleClosePopover(evt) {
+  evt.preventDefault();
+  document.querySelector("#todo-list__popover").hidePopover();
+}
+
+closePopoverBtn.addEventListener("click", handleClosePopover);
+
 addBtn.addEventListener("click", onAddTask);
 
-// taskInput.addEventListener("keydown", (evt) => {
-//   if (evt.key === "Enter") {
-//     onAddTask();
-//   }
-// });
+taskInput.addEventListener("keydown", (evt) => {
+  if (evt.code === "Enter" && !evt.shiftKey && !evt.ctrlKey) {
+    onAddTask(evt);
+  }
+});

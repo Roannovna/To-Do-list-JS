@@ -5,12 +5,18 @@
 @import url(./styles/todo-list.css);
 @import url(./styles/popover.css);
 
+html, body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   background-color: var(--background-color);
   font-family: var(--font-family);
   padding: 50px;
   display: grid;
-  /* grid-auto-rows: min-content; */
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -25,4 +31,9 @@ body {
   width: 100%;
   height: 80vmin;
   display: block;
+}
+
+* {
+  scrollbar-color: var(--accent-color) var(--background-color);
+  scrollbar-width: thin;
 }
