@@ -1,5 +1,9 @@
-.main {
+main {
   grid-column-start: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 .header {
@@ -29,24 +33,22 @@
 
 .todo-list__content {
   padding-bottom: 70px;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: calc(100vh - 200px);
 }
 
 .todo-list {
+  overflow-y: auto;
+  list-style: none;
   display: flex;
   gap: 15px;
   flex-direction: column;
   justify-content: left;
   align-content: space-around;
   width: 100%;
+  max-height: 100%;
 }
-
-/* .todo__line {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  width: 100%;
-  justify-content: space-between;
-} */
 
 .todo__line {
   display: grid;
@@ -98,4 +100,8 @@
   .todo__delete-btn {
     background-image: url(../images/cancel-light.svg);
   }
+}
+
+#popover__open-btn {
+  align-self: center;
 }
