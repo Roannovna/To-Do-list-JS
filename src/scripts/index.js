@@ -1,5 +1,6 @@
 import "../index.css";
 import khokhloma from "../images/khokhloma.svg";
+import { saveTasks, loadTasks } from "./localStorage";
 
 document.querySelector(".decor__image").src = khokhloma;
 
@@ -9,28 +10,42 @@ const todoList = document.querySelector(".todo-list");
 const taskTemplate = document.querySelector("template");
 const closePopoverBtn = document.querySelector("#popover__close-btn");
 
+loadTasks(addTaskToDOM);
+
 function handleDeleteTodoLine(evt) {
   evt.currentTarget.closest(".todo__line").remove();
+  saveTasks();
 }
 
 function handleChangeStatus(evt) {
   evt.currentTarget.closest(".todo__line").classList.toggle("done");
+  saveTasks();
+}
+
+function addTaskToDOM(taskText, isDone = false) {
+  const taskItem = taskTemplate.content.cloneNode(true);
+  const taskElement = taskItem.querySelector(".todo__line");
+  const taskTextElement = taskItem.querySelector(".todo__task");
+  const deleteBtn = taskItem.querySelector(".todo__delete-btn");
+  const statusBtn = taskItem.querySelector(".todo__status-btn");
+
+  taskTextElement.textContent = taskText;
+  if (isDone) {
+    taskElement.classList.add("done");
+  }
+
+  deleteBtn.addEventListener("click", handleDeleteTodoLine);
+  statusBtn.addEventListener("click", handleChangeStatus);
+  todoList.append(taskElement);
 }
 
 function onAddTask(evt) {
   evt.preventDefault();
   if (taskInput.value.trim() === "") return;
 
-  const taskItem = taskTemplate.content.cloneNode(true);
-  const taskText = taskItem.querySelector(".todo__task");
-  const deleteBtn = taskItem.querySelector(".todo__delete-btn");
-  const statusBtn = taskItem.querySelector(".todo__status-btn");
-
-  taskText.textContent = taskInput.value;
-  deleteBtn.addEventListener("click", handleDeleteTodoLine);
-  statusBtn.addEventListener("click", handleChangeStatus);
-  todoList.append(taskItem);
+  addTaskToDOM(taskInput.value);
   taskInput.value = "";
+  saveTasks();
 }
 
 function handleClosePopover(evt) {
